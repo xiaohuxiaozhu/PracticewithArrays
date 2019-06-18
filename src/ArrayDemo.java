@@ -120,16 +120,17 @@ public class ArrayDemo {
 
         int[] array1 = {1, 7, 6, 5, 9};
         int[] array2 = {2, 7, 6, 3, 4};
-
-        for (int index1 = 0; index1 < array1.length; index1++)
-            if (array1 [index1]== 2)
-
-                for (int index2 = 0; index2 < array2.length; index2++) {
-                    if (array2[index2] == 2)
-
-                    System.out.println("Print out the index each time the value equals  " + index1 +","+index2);
+        for (int x=0;x<array1.length;x++){
+            for (int y=0; y<array2.length;y++){
+                if (array1[x]==array2[y]){
+                    System.out.println("(" + array1[x] + ","+  array2[y] +")");
+                }
+            }
+        }
+     //   System.out.println("Interger Array as List:" +Arrays.asList(array1));
+   //                 System.out.println("Print out the index each time the value equals  " + index1 +","+index2);
                 }
             }
 
-    }
+
 

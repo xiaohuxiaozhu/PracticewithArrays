@@ -1,4 +1,6 @@
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.*;
 
 public class ArrayDemo {
     public static void main(String[] args) {
@@ -34,23 +36,22 @@ public class ArrayDemo {
         System.out.println("Enter 10 number");
         int[] arr = new int[10];
         int newSum = 0;
-        int average =0;
-        Scanner sc= new Scanner(System.in);
-        for(int i = 0; i < arr.length; i++)
-            arr[i]=sc.nextInt();
-        for(int i=0; i<10;i++)
-            newSum+=arr[i];
-        System.out.println("New Total is "+ newSum);
-            average = newSum/10;
-            System.out.println("Average is :" + average);
+        int average = 0;
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < arr.length; i++)
+            arr[i] = sc.nextInt();
+        for (int i = 0; i < 10; i++)
+            newSum += arr[i];
+        System.out.println("New Total is " + newSum);
+        average = newSum / 10;
+        System.out.println("Average is :" + average);
 
             /*
             5. Create an array to store 3 names, loop through that array to print out the names.
              */
 
-        String[] name = {"Good","Bad","So far so good"};
-        for(int i=0; i<name.length; i++)
-        {
+        String[] name = {"Good", "Bad", "So far so good"};
+        for (int i = 0; i < name.length; i++) {
             System.out.println(name[i]);
 
 
@@ -61,6 +62,74 @@ public class ArrayDemo {
         Loop through the array and print out the index each time the value equals 5.
          */
 
+        int[] newValues = {2, 5, 9, 0, 2, 1, 8, 5, 4};
+        System.out.println("Loop through the array and print out the index each time the value equals 5.");
+
+        for (int index = 0; index < newValues.length; index++) {
+            if (newValues[index] == 5) {
+                {
+                    System.out.println("Print out the index each time the value equals  " + index);
+                }
+
+            }
+
+
+        }
+
+        /*
+        7. Declare an array with the numbers 1-10.
+        Print the numbers 1-10 backwards from the array.
+         */
+        //create an array of integers
+
+        Integer arr1[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        System.out.println("Original Arry :" + Arrays.toString(arr1));
+        Collections.reverse(Arrays.asList(arr1));
+        System.out.println("Modified Array:" + Arrays.toString(arr1));
+
+
+
+        /*
+        Given the following array: ['w','t','y','h','k']
+        Loop through the array and replace the the letter 't'
+        with the word "hello" once it's found.
+         */
+
+        String[] gArray = {"w", "t", "y", "h", "k"};
+    //    String[] gArray = new String[]{"w", "t", "y", "h", "k"};
+        for (int i = 0; i < gArray.length; i++) {
+            if (gArray[i] == "t") {
+                gArray[i] = "Hello";
+                System.out.println(gArray[i]);
+            }
+        }
+
+
+        //   String originalString ="w,t,y,h,k";
+        //   String newString=originalString.replace('t','Hello');
+
+        /*
+        Given array 1: [1,7,6,5,9] and
+        array 2: [2,7,6,3,4]
+        Write a program that will print out
+        all matching pairs from arrays 1 and 2.
+        Expected output:
+        (7,7) and (6,6)
+         */
+
+
+        int[] array1 = {1, 7, 6, 5, 9};
+        int[] array2 = {2, 7, 6, 3, 4};
+
+        for (int index1 = 0; index1 < array1.length; index1++)
+            if (array1 [index1]== 2)
+
+                for (int index2 = 0; index2 < array2.length; index2++) {
+                    if (array2[index2] == 2)
+
+                    System.out.println("Print out the index each time the value equals  " + index1 +","+index2);
+                }
+            }
 
     }
-}
+
